@@ -9,7 +9,7 @@ class Weather {
       const response = await fetch(`http://api.weatherstack.com/current?access_key=${apiKey}&query=${this.location}`); 
    
       const responseData = await response.json(); 
-      return responseData.current; 
+      return responseData; 
    }
 
    // Change location
