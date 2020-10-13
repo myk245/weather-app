@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', getWeather);
 
 // Change location event 
 document.getElementById('w-change-btn').addEventListener('click', (event) => {
-   const newLocation = document.getElementById('new-location').value;
+   const location = document.getElementById('location').value;
 
    // Change location
-   weather.changeLocation(newLocation); 
+   weather.changeLocation(location); 
 
    // Get and display weather for new location
    getWeather(); 
