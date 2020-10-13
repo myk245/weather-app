@@ -1,13 +1,24 @@
 // Init weather object
 const weather = new Weather('New York'); 
-
 // Init UI object
 const ui = new UI(); 
 
 // Get weather on DOM load
 document.addEventListener('DOMContentLoaded', getWeather); 
 
-// weather.changeLocation('Miami'); 
+// Change location event 
+document.getElementById('w-change-btn').addEventListener('click', (event) => {
+   const newLocation = document.getElementById('new-location').value;
+
+   // Change location
+   weather.changeLocation(newLocation); 
+
+   // Get and display weather for new location
+   getWeather(); 
+
+   // Close modal -- jQuery required for this
+   $('#locModal').modal('hide'); 
+})
 
 function getWeather() {
    weather.getWeather()
