@@ -1,5 +1,3 @@
-// const apiKey = config.API_KEY; 
-
 class Weather {
    constructor(location) {
       this.apiKey = '1f4468c977bea34e30b2f625ae0171fc'; 
